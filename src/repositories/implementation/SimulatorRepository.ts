@@ -9,7 +9,7 @@ export class SimulatorRepository implements ISimulatorRepository {
     }
 
     async getByProfileId(id: string) {
-        let query = { simulator_id: id };
+        let query = { profile_id: id };
         return await Simulator.findOne(query);
     }
     

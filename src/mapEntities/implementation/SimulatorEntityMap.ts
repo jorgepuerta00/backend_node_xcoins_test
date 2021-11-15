@@ -6,6 +6,7 @@ import { IEntityMap } from "../abstractions/IEntityMap";
 
 const _serializeToDataEntity = (entity) => {
     var dataEntity =  new Simulator({
+        profile_id: entity.profile_id,
         name: entity.name,
         start_date: entity.start_date,
         check_date: entity.check_date,
@@ -20,6 +21,7 @@ const _serializeToDataEntity = (entity) => {
 const _serializeToDto = (entity) => {
     return new SimulatorDto(
         entity._id,
+        entity.profile_id,
         entity.name,
         entity.start_date,
         entity.check_date,

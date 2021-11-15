@@ -9,7 +9,6 @@ export class ProfileRepository implements IProfileRepository {
   }
 
   async create(data) {
-console.log(data.email)
     let profile = await Profile.findOne({
       $or: [{ email: data.email }, { nickname: data.nickname }],
     }).exec();

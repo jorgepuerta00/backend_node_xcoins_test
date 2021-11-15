@@ -17,8 +17,8 @@ export class FavoriteController {
 
     async get(req, res) {
         const useCase = new GetAllFavorites(this._favoriteRepository,this._mapEntity);
-        const favorite = await useCase.execute();
-        return res.json({ favorite });
+        const data = await useCase.execute();
+        return res.json(data);
     }
 
     async getByProfileId(req, res) {

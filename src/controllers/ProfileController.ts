@@ -18,8 +18,8 @@ export class ProfileController {
 
     async get(req, res) {
         const useCase = new GetAllProfiles(this._profileRepository, this._mapEntity);
-        const favorite = await useCase.execute();
-        return res.json({ favorite });
+        const data = await useCase.execute();
+        return res.json(data);
     }
 
     async create(req, res) {

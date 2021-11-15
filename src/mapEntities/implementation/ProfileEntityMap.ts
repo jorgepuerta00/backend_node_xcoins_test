@@ -27,7 +27,7 @@ const _serializeToDto = (entity) => {
 }
 
 export class ProfileEntityMap implements IEntityMap {
-    async serializeToDataEntity(data) {
+    serializeToDataEntity(data) {
         if (!data) {
             throw new Error('Invalid Data');
         }
@@ -37,7 +37,7 @@ export class ProfileEntityMap implements IEntityMap {
         return _serializeToDataEntity(data);
     }
 
-    async serializeToDto(data) {
+    serializeToDto(data) {
         if (!data) {
             throw new Error('Invalid Data');
         }

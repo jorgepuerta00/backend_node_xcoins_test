@@ -33,7 +33,7 @@ const _serializeToDto = (entity) => {
 }
 
 export class SimulatorEntityMap implements IEntityMap{
-    async serializeToDataEntity(data) {
+    serializeToDataEntity(data) {
         if (!data) {
             throw new Error('Invalid Data');
         }
@@ -43,7 +43,7 @@ export class SimulatorEntityMap implements IEntityMap{
         return _serializeToDataEntity(data);
     }
 
-    async serializeToDto(data) {
+    serializeToDto(data) {
         if (!data) {
             throw new Error('Invalid Data');
         }

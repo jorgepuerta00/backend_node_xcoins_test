@@ -4,6 +4,8 @@ import { SimulatorRepository } from "../repositories/implementation/SimulatorRep
 import { SimulatorEntityMap } from "../mapEntities/implementation/SimulatorEntityMap";
 import { GetAllSimulators } from "../usesCases/Simulator/GetAllSimulators";
 import { GetSimulatorByProfileId } from "../usesCases/Simulator/GetSimulatorByProfileId";
+import { CreateSimulator } from "../usesCases/simulator/CreateSimulator";
+import { SimulatorDto } from "../entities/SimulatorDto";
 
 export class SimulatorController {
 
@@ -27,4 +29,12 @@ export class SimulatorController {
     const data = await useCase.execute();
     res.json(data);
   }
+
+  async create(req, res) {
+    const { profile_id, name, start_date, check_date, cryptocurrency, divisa, crypto_price_start, crypto_price_check } = req.body;
+    const useCase = new CreateSimulator(this._SimulatorRepository, this._mapEntity);
+    useCase.setSimulatorData(new SimulatorDto(null, profile_id, name, start_date, check_date, cryptocurrency, divisa, crypto_price_start, crypto_price_check));
+    const data = await useCase.execute();
+    res.json(data);
+}
 }

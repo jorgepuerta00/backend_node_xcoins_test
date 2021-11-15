@@ -2,8 +2,8 @@
 
 import { ProfileRepository } from "../repositories/implementation/ProfileRepository";
 import { ProfileEntityMap } from "../mapEntities/implementation/ProfileEntityMap";
-import { GetAllProfiles } from "../usesCases/GetAllProfiles";
-import { CreateProfile } from "../usesCases/CreateProfile";
+import { GetAllProfiles } from "../usesCases/profile/GetAllProfiles";
+import { CreateProfile } from "../usesCases/profile/CreateProfile";
 import { ProfileDto } from "../entities/ProfileDto";
 
 export class ProfileController {

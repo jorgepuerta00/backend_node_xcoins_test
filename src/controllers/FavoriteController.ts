@@ -2,8 +2,8 @@
 
 import { FavoriteRepository } from "../repositories/implementation/FavoriteRepository";
 import { FavoriteEntityMap } from "../mapEntities/implementation/FavoriteEntityMap";
-import { GetAllFavorites } from "../usesCases/GetAllFavorites";
-import { GetFavoriteByProfileId } from "../usesCases/GetFavoriteByProfileId";
+import { GetAllFavorites } from "../usesCases/favorite/GetAllFavorites";
+import { GetFavoriteByProfileId } from "../usesCases/favorite/GetFavoriteByProfileId";
 
 export class FavoriteController {
 

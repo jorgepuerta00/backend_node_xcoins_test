@@ -1,7 +1,7 @@
 'use strict';
-import { IProfileRepository } from "../repositories/abstractions/IProfileRepository";
-import { IEntityMap } from "../mapEntities/abstractions/IEntityMap";
-import { ProfileDto } from "../entities/ProfileDto";
+import { IProfileRepository } from "../../repositories/abstractions/IProfileRepository";
+import { IEntityMap } from "../../mapEntities/abstractions/IEntityMap";
+import { ProfileDto } from "../../entities/ProfileDto";
 
 export class CreateProfile {
 

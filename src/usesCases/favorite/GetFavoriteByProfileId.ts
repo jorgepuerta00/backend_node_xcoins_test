@@ -1,6 +1,6 @@
 'use strict';
-import { IFavoriteRepository } from "../repositories/abstractions/IFavoriteRepository";
-import { IEntityMap } from "../mapEntities/abstractions/IEntityMap";
+import { IFavoriteRepository } from "../../repositories/abstractions/IFavoriteRepository";
+import { IEntityMap } from "../../mapEntities/abstractions/IEntityMap";
 
 export class GetFavoriteByProfileId {
 

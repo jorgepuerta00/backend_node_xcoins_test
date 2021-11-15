@@ -1,6 +1,6 @@
 'use strict';
-import { IProfileRepository } from "../repositories/abstractions/IProfileRepository";
-import { IEntityMap } from "../mapEntities/abstractions/IEntityMap";
+import { IProfileRepository } from "../../repositories/abstractions/IProfileRepository";
+import { IEntityMap } from "../../mapEntities/abstractions/IEntityMap";
 
 export class GetAllProfiles {
 
